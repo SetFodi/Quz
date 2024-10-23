@@ -1,0 +1,22 @@
+<div class="user-detail">
+    <h2>{{ user.email }}</h2>
+    <table>
+      <tr>
+        <th>ID</th>
+        <td>{{ user.id }}</td>
+      </tr>
+      <tr>
+        <th>Username</th>
+        <td>{{ user.username }}</td>
+      </tr>
+      <tr>
+        <th>Email</th>
+        <td>{{ user.email }}</td>
+      </tr>
+      <tr>
+        <th>Status</th>
+        <td [ngClass]="{'confirmed': user.status === 'Confirmed', 'blocked': user.status === 'Blocked'}">{{ user.status }}</td>
+      </tr>
+    </table>
+  </div>
+  

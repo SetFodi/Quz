@@ -1,0 +1,29 @@
+.user-detail {
+    width: 60%;
+    margin: 20px auto;
+    text-align: left;
+  }
+  
+  .user-detail table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .user-detail th, .user-detail td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .user-detail th {
+    background-color: #f1f1f1;
+  }
+  
+  .confirmed {
+    color: green;
+  }
+  
+  .blocked {
+    color: red;
+    font-weight: bold;
+  }
+  

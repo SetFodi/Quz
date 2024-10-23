@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="tabs">
+      <button class="tab">Users</button>
+    </div>
+  
+    <table class="user-table">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Registration Time</th>
+          <th>Last Login</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users" (click)="selectUser(user.id)">
+          <td>{{ user.id }}</td>
+          <td>{{ user.username }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.registrationTime }}</td>
+          <td>{{ user.lastLogin }}</td>
+          <td [ngClass]="{'confirmed': user.status === 'Confirmed', 'blocked': user.status === 'Blocked'}">
+            {{ user.status }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
